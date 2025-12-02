@@ -30,7 +30,7 @@ const Home = () => {
                             <a href="#locations" className="text-gray-700 hover:text-sky-400 transition-colors font-medium">Locations</a>
                             <a href="#testimonials" className="text-gray-700 hover:text-sky-400 transition-colors font-medium">Testimonials</a>
                             <a
-                                href="https://forms.google.com/placeholder"
+                                href="https://forms.gle/5uZfEjrbuwGVB6wP8"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-navy-900 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-400/30"
@@ -57,7 +57,7 @@ const Home = () => {
                             <a href="#locations" onClick={toggleMenu} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-sky-400 hover:bg-gray-50 rounded-md">Locations</a>
                             <a href="#testimonials" onClick={toggleMenu} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-sky-400 hover:bg-gray-50 rounded-md">Testimonials</a>
                             <a
-                                href="https://forms.google.com/placeholder"
+                                href="https://forms.gle/5uZfEjrbuwGVB6wP8"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={toggleMenu}
@@ -93,7 +93,7 @@ const Home = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
-                                href="https://forms.google.com/placeholder"
+                                href="https://forms.gle/5uZfEjrbuwGVB6wP8"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center bg-sky-400 text-navy-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-white/20 transform hover:-translate-y-1"
@@ -292,7 +292,7 @@ const Home = () => {
                         Join our global community of pilots and aviation professionals today. Your future in the skies awaits.
                     </p>
                     <a
-                        href="https://forms.google.com/placeholder"
+                        href="https://forms.gle/5uZfEjrbuwGVB6wP8"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center bg-navy-900 text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-white hover:text-navy-900 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
