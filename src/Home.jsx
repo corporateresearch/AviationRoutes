@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Plane, MapPin, Users, FileText, Menu, X, ArrowRight, CheckCircle } from 'lucide-react';
-import logo from './assets/logo.png';
-import heroBg from './assets/hero-bg.png';
-import simulator from './assets/simulator.png';
-import flightPath from './assets/flight-path.png';
+import logo from './assets/logo.jpg';
+import heroBg from './assets/hero-bg.jpg';
+import simulator from './assets/simulator.jpg';
+import flightPath from './assets/flight-path.jpg';
 import ApplyForm from './ApplyForm';
 
 const Home = () => {
@@ -15,12 +15,13 @@ const Home = () => {
         <div className="min-h-screen flex flex-col font-sans text-navy-900">
             {/* Global Navigation Bar */}
             {/* Placeholder: Add Global Navigation Bar here. */}
-            <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+            <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+            <nav aria-label="Main">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         {/* Logo */}
                         <div className="flex-shrink-0 flex items-center gap-3">
-                            <img src={logo} alt="Aviation Routes Logo" className="h-10 w-auto" />
+                            <img src={logo} alt="Aviation Routes logo" width="40" height="40" className="h-10 w-auto" />
                             <span className="font-bold text-xl tracking-tight text-navy-900">Aviation Routes</span>
                         </div>
 
@@ -40,7 +41,7 @@ const Home = () => {
 
                         {/* Mobile Menu Button */}
                         <div className="md:hidden flex items-center">
-                            <button onClick={toggleMenu} className="text-navy-900 hover:text-sky-400 focus:outline-none">
+                            <button onClick={toggleMenu} aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMenuOpen} aria-controls="mobile-menu" className="text-navy-900 hover:text-sky-400 focus:outline-none">
                                 {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                             </button>
                         </div>
@@ -49,7 +50,7 @@ const Home = () => {
 
                 {/* Mobile Menu */}
                 {isMenuOpen && (
-                    <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+                    <div id="mobile-menu" className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
                         <div className="px-4 pt-2 pb-6 space-y-2">
                             <a href="#about" onClick={toggleMenu} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-sky-400 hover:bg-gray-50 rounded-md">About Us</a>
                             <a href="#services" onClick={toggleMenu} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-sky-400 hover:bg-gray-50 rounded-md">Services</a>
@@ -66,18 +67,20 @@ const Home = () => {
                     </div>
                 )}
             </nav>
+            </header>
 
+            <main>
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-navy-900">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <img src={heroBg} alt="Modern Aircraft" className="w-full h-full object-cover opacity-40" />
+                    <img src={heroBg} alt="" fetchPriority="high" className="w-full h-full object-cover opacity-40" />
                     <div className="absolute inset-0 bg-navy-900/85"></div>
                 </div>
 
                 {/* Flight Path Overlay */}
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
-                    <img src={flightPath} alt="Flight Path" className="w-full h-full object-cover" />
+                    <img src={flightPath} alt="" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
@@ -112,7 +115,7 @@ const Home = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="relative">
                             <div className="absolute -inset-4 bg-sky-400/20 rounded-2xl transform rotate-3"></div>
-                            <img src={simulator} alt="Student in Simulator" className="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]" />
+                            <img src={simulator} alt="Student pilot training in a flight simulator" width="1024" height="1024" loading="lazy" className="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]" />
                             <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl max-w-xs">
                                 <p className="text-4xl font-bold text-sky-400 mb-1">15+</p>
                                 <p className="text-navy-900 font-semibold">Years of Experience in Aviation Training</p>
@@ -306,12 +309,14 @@ const Home = () => {
                 </div>
             </section>
 
+            </main>
+
             {/* Footer */}
             <footer className="bg-navy-900 text-white py-12 border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center gap-3 mb-6 md:mb-0">
-                            <img src={logo} alt="Aviation Routes Logo" className="h-8 w-auto brightness-0 invert" />
+                            <img src={logo} alt="" width="32" height="32" loading="lazy" className="h-8 w-auto rounded bg-white" />
                             <span className="font-bold text-xl tracking-tight">Aviation Routes</span>
                         </div>
                         <div className="flex space-x-6 mb-6 md:mb-0">
