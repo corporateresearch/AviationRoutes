@@ -4,6 +4,7 @@ import logo from './assets/logo.png';
 import heroBg from './assets/hero-bg.png';
 import simulator from './assets/simulator.png';
 import flightPath from './assets/flight-path.png';
+import ApplyForm from './ApplyForm';
 
 const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,9 +31,7 @@ const Home = () => {
                             <a href="#locations" className="text-gray-700 hover:text-sky-400 transition-colors font-medium">Locations</a>
                             <a href="#testimonials" className="text-gray-700 hover:text-sky-400 transition-colors font-medium">Testimonials</a>
                             <a
-                                href="https://forms.gle/5uZfEjrbuwGVB6wP8"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="#apply"
                                 className="bg-navy-900 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-400/30"
                             >
                                 Apply Now
@@ -57,9 +56,7 @@ const Home = () => {
                             <a href="#locations" onClick={toggleMenu} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-sky-400 hover:bg-gray-50 rounded-md">Locations</a>
                             <a href="#testimonials" onClick={toggleMenu} className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-sky-400 hover:bg-gray-50 rounded-md">Testimonials</a>
                             <a
-                                href="https://forms.gle/5uZfEjrbuwGVB6wP8"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="#apply"
                                 onClick={toggleMenu}
                                 className="block w-full text-center mt-4 bg-navy-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-400 transition-all"
                             >
@@ -75,11 +72,11 @@ const Home = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img src={heroBg} alt="Modern Aircraft" className="w-full h-full object-cover opacity-40" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-navy-900/90 via-navy-900/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-navy-900/85"></div>
                 </div>
 
                 {/* Flight Path Overlay */}
-                <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
+                <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
                     <img src={flightPath} alt="Flight Path" className="w-full h-full object-cover" />
                 </div>
 
@@ -93,9 +90,7 @@ const Home = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
-                                href="https://forms.gle/5uZfEjrbuwGVB6wP8"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="#apply"
                                 className="inline-flex items-center justify-center bg-sky-400 text-navy-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-white/20 transform hover:-translate-y-1"
                             >
                                 Apply Now <ArrowRight className="ml-2 h-5 w-5" />
@@ -112,7 +107,7 @@ const Home = () => {
             </section>
 
             {/* About Us / Our Story */}
-            <section id="about" className="py-20 bg-white">
+            <section id="about" className="py-20 bg-white scroll-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="relative">
@@ -152,7 +147,7 @@ const Home = () => {
             </section>
 
             {/* Our Services */}
-            <section id="services" className="py-20 bg-gray-50">
+            <section id="services" className="py-20 bg-gray-50 scroll-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Our Services</h2>
@@ -205,8 +200,8 @@ const Home = () => {
             </section>
 
             {/* Flight School Locations */}
-            <section id="locations" className="py-20 bg-navy-900 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/world-map.png')] opacity-10"></div>
+            <section id="locations" className="scroll-mt-20 py-20 bg-navy-900 text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle,_#ffffff_1px,_transparent_1px)] bg-[length:24px_24px] opacity-10"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">Global Training Locations</h2>
@@ -228,7 +223,7 @@ const Home = () => {
             </section>
 
             {/* Testimonials */}
-            <section id="testimonials" className="py-20 bg-white">
+            <section id="testimonials" className="py-20 bg-white scroll-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Student Success Stories</h2>
@@ -284,6 +279,17 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Application Form */}
+            <section id="apply" className="py-20 bg-gray-50 scroll-mt-20">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">Apply Now</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">Tell us about yourself and your goals, and our team will help you chart your route.</p>
+                    </div>
+                    <ApplyForm />
+                </div>
+            </section>
+
             {/* CTA Section */}
             <section className="py-20 bg-sky-400">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -292,9 +298,7 @@ const Home = () => {
                         Join our global community of pilots and aviation professionals today. Your future in the skies awaits.
                     </p>
                     <a
-                        href="https://forms.gle/5uZfEjrbuwGVB6wP8"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#apply"
                         className="inline-flex items-center justify-center bg-navy-900 text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-white hover:text-navy-900 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                     >
                         Apply Now <ArrowRight className="ml-2 h-6 w-6" />
